@@ -1,3 +1,86 @@
-body{
-	background:green;
+$colorMaps:(blue:#3296BA,yellow:#F39801,black:#222);
+.clearfix:after{
+	content:'';
+	height:0;
+	visibility:hidden;
+	display:block;
+	clear:both;
+}
+.pull-left{
+	float:left;
+}
+.pull-right{
+	float:right;
+}
+ul,ol,li{
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+a{
+	text-decoration:none;
+	color:map-get($colorMaps,black);
+}
+header{
+	height:60px;
+	background:map-get($colorMaps,blue);
+	width:100%;
+	.header-box {
+		width:1060px;
+		margin: 0 auto;
+	}
+	.header-box{
+		height:60px;
+		a{
+			display: block;
+		}	
+	}
+	.pull-right{
+		li{
+			
+			display: block;
+			float: left;
+			position:relative;
+			height:60px;
+			z-index: 1;
+			.tips-img{
+				display:none;
+				position:absolute;
+				width:100px;
+				height:100px;
+				top:50px;
+				left:-40px;
+				border:1px solid #ccc;
+				background: #fff;
+				z-index: 2;
+				padding:10px;
+				text-align: center;
+				img{
+					width:100px;
+					height:100px;
+				}
+			}		
+
+			&:hover .tips-img, .tips-img:hover{
+				display: block;
+			}	
+		
+		}
+		.qq{
+			background:url('../../dist/img/qq.png') no-repeat 0 0;	
+		}
+		.weixin{
+			background:url('../../dist/img/weixin.png') no-repeat 0 0;	
+		}					
+		.sina{
+			background:url('../../dist/img/sina.png') no-repeat 0 0;	
+		}
+		.qq, .weixin, .sina{
+			width:25px;
+			height:25px;
+			margin: 15px 10px;			
+			background-size:25px 25px;	
+			cursor: pointer;
+		}
+	}
 }

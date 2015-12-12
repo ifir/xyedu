@@ -1,2 +1,68 @@
-body {
-  background: green; }
+.clearfix:after {
+  content: '';
+  height: 0;
+  visibility: hidden;
+  display: block;
+  clear: both; }
+
+.pull-left {
+  float: left; }
+
+.pull-right {
+  float: right; }
+
+ul, ol, li {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none;
+  color: #222; }
+
+header {
+  height: 60px;
+  background: #3296BA;
+  width: 100%; }
+  header .header-box {
+    width: 1060px;
+    margin: 0 auto; }
+  header .header-box {
+    height: 60px; }
+    header .header-box a {
+      display: block; }
+  header .pull-right li {
+    display: block;
+    float: left;
+    position: relative;
+    height: 60px;
+    z-index: 1; }
+    header .pull-right li .tips-img {
+      display: none;
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      top: 50px;
+      left: -40px;
+      border: 1px solid #ccc;
+      background: #fff;
+      z-index: 2;
+      padding: 10px;
+      text-align: center; }
+      header .pull-right li .tips-img img {
+        width: 100px;
+        height: 100px; }
+    header .pull-right li:hover .tips-img, header .pull-right li .tips-img:hover {
+      display: block; }
+  header .pull-right .qq {
+    background: url("../../dist/img/qq.png") no-repeat 0 0; }
+  header .pull-right .weixin {
+    background: url("../../dist/img/weixin.png") no-repeat 0 0; }
+  header .pull-right .sina {
+    background: url("../../dist/img/sina.png") no-repeat 0 0; }
+  header .pull-right .qq, header .pull-right .weixin, header .pull-right .sina {
+    width: 25px;
+    height: 25px;
+    margin: 15px 10px;
+    background-size: 25px 25px;
+    cursor: pointer; }
