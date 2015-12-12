@@ -3,7 +3,7 @@
 ###启动项目
 
 ####1.安装node环境
-[node官网](www.nodejs.org)
+[node官网](http://www.nodejs.org)
 
 ####2.安装gulp
 > npm install -g gulp
