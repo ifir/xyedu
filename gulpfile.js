@@ -57,6 +57,7 @@ gulp.task('min:img', function  () {
 //监视文件变化
 gulp.task('watch',function (){
 	//gulp.watch([htmlPath,scssPath,imgPath,imgPath], ['reload']);
+	gulp.watch([htmlPath]);
 	gulp.watch([scssPath], ['sass']);
 	gulp.watch([imgPath], ['img']);
 	gulp.watch([imgPath], ['js']);

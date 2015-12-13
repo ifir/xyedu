@@ -1,4 +1,23 @@
-$colorMaps:(blue:#3296BA,yellow:#F39801,black:#222);
+$colorMaps:(blue:#3296BA,yellow:#F39801,black:#656565);
+@mixin shadow($value...){
+  -webkit-box-shadow:$value;
+  -moz-box-shadow:$value;
+  box-shadow:$value;
+}
+@mixin radius($value...){
+  -webkit-border-radius:$value;
+  -moz-border-radius:$value;
+  border-radius:$value;
+}
+@mixin sizing{
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+body{
+	font-family:'Microsoft YaHei';
+	-webkit-font-smoothing:antialiased;
+}
 .clearfix:after{
 	content:'';
 	height:0;
@@ -12,6 +31,12 @@ $colorMaps:(blue:#3296BA,yellow:#F39801,black:#222);
 .pull-right{
 	float:right;
 }
+.text-center{
+	text-align:center;
+}
+.text-yellow{
+	color:map-get($colorMaps,yellow)!important;
+}
 ul,ol,li{
 	list-style:none;
 	margin:0;
@@ -21,21 +46,67 @@ a{
 	text-decoration:none;
 	color:map-get($colorMaps,black);
 }
-header{
+.active a{
+	color:map-get($colorMaps,blue);
+}
+.container {
+	width:1060px;
+	margin: 0 auto;
+}
+.btn{
+	outline:none;
+	border:0;
+	background:transparent;
+	color:#222;
+}
+.btn-yellow{
+	border:1px solid map-get($colorMaps,yellow);
+	@include radius(5px);
+	color:map-get($colorMaps,yellow);
+	padding:10px 20px;
+}
+.btn-yellow:hover, .clicked{
+	background:map-get($colorMaps,yellow);
+	color:#fff;
+}
+.btn-lg{
+	@include radius(50px);
+	padding:15px 180px;
+	font-size:30px;
+}
+/* =================导航栏============== */
+.navbar{
 	height:60px;
 	background:map-get($colorMaps,blue);
-	width:100%;
-	.header-box {
-		width:1060px;
-		margin: 0 auto;
+	width:100%;	
+	.container{
+		height:60px;			
 	}
-	.header-box{
-		height:60px;
-		a{
-			display: block;
-		}	
+	.pull-left{
+		img{
+			width:25px;
+			height:25px;
+			margin-top: 19px;
+		}
+		li{
+			float: left;
+			
+			a{
+				display:block;
+				color: #fff;
+				font-size: 16px;
+				font-weight: bolder;
+				line-height: 60px;				
+			}
+			&:nth-child(2){
+				margin-right: 30px; 
+			}
+
+		}
+
 	}
 	.pull-right{
+
 		li{
 			
 			display: block;
@@ -49,7 +120,7 @@ header{
 				width:100px;
 				height:100px;
 				top:50px;
-				left:-40px;
+				left:-35px;
 				border:1px solid #ccc;
 				background: #fff;
 				z-index: 2;
@@ -59,11 +130,24 @@ header{
 					width:100px;
 					height:100px;
 				}
+				&:after{
+					content: '';
+					position:absolute;
+					top: -10px;
+					left: 55px;
+					width: 0;
+					height: 0;
+					border-left: 5px solid transparent;
+				    border-right: 5px solid transparent;
+				    border-bottom: 10px solid #fff;
+
+				}
 			}		
 
 			&:hover .tips-img, .tips-img:hover{
 				display: block;
-			}	
+			}
+				
 		
 		}
 		.qq{
@@ -76,11 +160,214 @@ header{
 			background:url('../../dist/img/sina.png') no-repeat 0 0;	
 		}
 		.qq, .weixin, .sina{
+			display: block;
 			width:25px;
 			height:25px;
-			margin: 15px 10px;			
+			margin: 15px;			
 			background-size:25px 25px;	
 			cursor: pointer;
 		}
+		.sina{
+			margin-right: 0;
+		}
 	}
+}
+/* ================主导航栏=================*/
+nav{
+	height:90px;
+	width:100%;
+	padding: 5px 0;
+	.container{
+		height: 80px;
+	}
+	.logo{
+		margin-top: 5px;
+		img{
+			width: 200px;
+			height: 70px;
+		}
+	}
+
+	li{
+		float: left;
+		margin:32px 30px;
+
+		a{
+			font-weight: bolder;
+			&:hover{
+				color:map-get($colorMaps,blue);			
+			}
+		}
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+
+}
+/* ================内容1=================*/
+.section-header{
+	width:100%;
+	overflow:hidden;
+
+	.bg-img{
+		background:url(../../dist/img/bg1.jpg) no-repeat center center;
+		background-size:cover;
+		padding:10px 0 20px 0;
+	}
+	.bg-title{
+		font-weight: bolder;
+		color:map-get($colorMaps,yellow);
+		font-size: 60px;
+		margin:0 0 40px 0;
+	}
+	article > p{
+		text-align: center;
+		color:map-get($colorMaps,blue);
+		margin: 15px 0;
+		font-weight: bolder;
+	}
+	.list-box li{
+		float: left;
+		min-width: 50%;
+		margin:10px 0;
+		color:map-get($colorMaps,yellow);
+		font-size: 18px;
+		&:before{
+			content: '';
+			display: inline-block;
+			width: 15px;
+			height: 15px;
+			background:map-get($colorMaps,yellow);
+			@include radius(50%);
+			margin-right:40px;
+		}
+	}
+	.flow-title{
+		width: 670px;
+		height: 70px;
+		background:map-get($colorMaps,blue);
+		line-height: 70px;
+		color:#fff;
+		margin: 20px auto;
+	}
+	.flow-box{
+		.pull-left{
+			padding:0 20px;
+			width: 30%;
+			
+			color:map-get($colorMaps,yellow);
+			border:2px solid map-get($colorMaps,yellow);
+			@include sizing;
+			font-size: 18px;
+			&:nth-child(2){
+				margin:0 5%;
+			}
+		}
+
+			
+	}
+}
+/* ================金牌名师=================*/
+.section-teachers{
+	padding:10px 0 20px 0;
+	background:#F4F4F4;
+	.photo-box{
+		overflow: hidden;
+	}
+	@at-root .h1-line{
+		color:map-get($colorMaps,blue);
+		font-size: 40px;
+		font-weight:normal;
+		padding-bottom: 60px;
+		position:relative;
+		&:before, &:after{
+			content: '';
+			position:absolute;
+			left:50%;			
+		}
+		&:before{
+			background:map-get($colorMaps,yellow);
+			width:160px;
+			height: 8px;
+			top:82px;
+			margin-left: -80px;
+			z-index: 12;
+		}
+		&:after{
+			background:#ccc;
+			width:360px;
+			height: 2px;			
+			top:90px;
+			margin-left: -180px;
+			z-index: 2;
+		}
+	}
+	.photo-info{
+		width: 25%;
+		height: 480px;
+		@include sizing;
+		border:1px solid #ccc;
+		color:map-get($colorMaps,blue);
+		.head-photo{
+			position:relative;
+			z-index: 10;
+			img{
+				width: 263px;
+				height: 250px;
+			}
+			.photo-mask{
+				display: none;
+				position:absolute;
+				z-index: 12;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 250px;
+				background:#fff;
+				opacity: .6;
+				filter: alpha(opacity=60);
+			}
+		}
+		&:hover .photo-mask{
+			display: block;
+		}
+		&:hover{
+			color:#fff;
+			background:map-get($colorMaps,blue);
+		}
+		.introduce{
+			padding:0 20px;
+			h3{
+				font-size: 30px;
+				font-weight: normal;
+				border-bottom:1px solid map-get($colorMaps,yellow);
+				margin: 0;
+				padding:20px 0;
+			}
+		}
+	}
+	.index-btn{
+		width: 220px;
+		height: 50px;
+		margin:20px auto 10px auto;
+		span{
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			background:#fff;
+			border:1px solid map-get($colorMaps,blue);;			
+			@include radius(50%);
+			@include sizing;
+			margin: 15px;
+			cursor: pointer;
+		}
+		.cur{
+				background:map-get($colorMaps,blue);
+		}
+	}
+}
+
+/* ================独家保障=================*/
+.section-ensure{
+
 }
