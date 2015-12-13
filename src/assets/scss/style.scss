@@ -52,6 +52,7 @@ a{
 .container {
 	width:1060px;
 	margin: 0 auto;
+	position:relative;
 }
 .btn{
 	outline:none;
@@ -288,8 +289,8 @@ nav{
 		&:before{
 			background:map-get($colorMaps,yellow);
 			width:160px;
-			height: 8px;
-			top:82px;
+			height: 9px;
+			top:86px;
 			margin-left: -80px;
 			z-index: 12;
 		}
@@ -355,7 +356,7 @@ nav{
 			width: 20px;
 			height: 20px;
 			background:#fff;
-			border:1px solid map-get($colorMaps,blue);;			
+			border:1px solid map-get($colorMaps,blue);			
 			@include radius(50%);
 			@include sizing;
 			margin: 15px;
@@ -369,5 +370,69 @@ nav{
 
 /* ================独家保障=================*/
 .section-ensure{
+	span{
+		color :map-get($colorMaps,blue);
+		margin:0 5px;
+	}
+	.ensure-box{
+		margin:40px 0 20px 0; 
+		.pull-left{
+			width: 33.333333%;
+			margin-bottom: 20px;
+		}
+		img{
+			width: 210px;
+			height: 210px;
+		}
+		h4{
+			color:map-get($colorMaps,blue);
+		}
+	}
 
+}
+/* ================推荐课程=================*/
+.section-recommend{
+	padding:10px 0 20px 0;
+	background:#F4F4F4;	
+	p{
+		color:map-get($colorMaps,blue);
+		font-size: 20px;
+	}
+	img{
+		width: 100%;
+		height: auto;
+	}	
+}
+.footer{
+	width:100%;
+	height:60px;
+	position:relative;
+	background:map-get($colorMaps,blue);
+	img{
+		width:25px;
+		height:25px;
+		margin-top: 19px;
+	}
+	ul{
+		li{
+			float:left;
+			a{
+				display:block;
+				color: #fff;
+				font-size: 16px;				
+				line-height: 60px;
+			}
+			&:nth-child(even){
+				margin-right: 30px;
+			}
+		}
+	}
+	span{
+		position:absolute;
+		line-height: 60px;
+		right: 0;
+		top: 0;
+		color: #fff;
+		font-size: 16px;
+	}
 }
