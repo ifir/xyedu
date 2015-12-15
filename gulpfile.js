@@ -12,7 +12,8 @@ var htmlPath = './src/*.html';
 //编译scss文件输出css
 gulp.task('sass', function  () {
 	gulp.src(scssPath)
-	.pipe(sass())
+	//outputStyle => Type: String Default: nested Values: nested, expanded, compact, compressed
+	.pipe(sass({outputStyle:'expanded'}))
 	.pipe(gulp.dest('./src/dist/css'))
 });
 //js输出

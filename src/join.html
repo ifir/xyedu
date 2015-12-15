@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=jw2vZZzQKknACIcvRqAn7g5B"></script>
+	<title>西游教育</title>
+	<link rel="stylesheet" type="text/css" href="dist/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="dist/css/style.css">
+	<!--[if lt IE 9]>
+	<script src="dist/js/lib/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<!-- 导航栏 -->
+	<header class="navbar">
+		<div class="container clearfix">
+			<div class="pull-left">
+				<ul>
+					<li>
+						<img src="dist/img/phone.png" alt="phone"></li>
+					<li>
+						<a href="tel:15620445745">15620445745</a>
+					</li>
+					<li>
+						<img src="dist/img/email.png" alt="phone"></li>
+					<li>
+						<a href="mailto:mengchunhui@xiyou.com">mengchunhui@xiyou.com</a>
+					</li>
+				</ul>
+			</div>
+			<div class="pull-right">
+				<ul class="clearfix">
+					<li>
+						<a class="qq" href="javascript:;"></a>
+						<div class="tips-img">
+							<img src="dist/img/100x100.png" alt="QQ"/>
+						</div>
+					</li>
+					<li>
+						<a class="weixin" href="#"></a>
+						<div class="tips-img">
+							<img src="dist/img/100x100.png" alt="weixin"/>
+						</div>
+					</li>
+					<li>
+						<a class="sina" href="#"></a>
+						<div class="tips-img">
+							<img src="dist/img/100x100.png" alt="weixin"/>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+
+	<!-- 主导航栏 -->
+	<nav>
+		<div class="container clearfix">
+			<div class="logo pull-left">
+				<img src="dist/img/logo.png" alt="LOGO"></div>
+			<ul class="pull-right clearfix">
+				<li>
+					<a href="index.html">首页</a>
+				</li>
+				<li>
+					<a href="#">课程体系</a>
+				</li>
+				<li>
+					<a href="#">相机资讯</a>
+				</li>
+				<li>
+					<a href="#">西游记事</a>
+				</li>
+				<li class="active">
+					<a href="#">加入我们</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<!-- banner -->
+	<div class="section-banner">
+		<div class="container"></div>
+	</div>
+	<div class="section-join-info">
+		<div class="text-center join-line">
+			<input class="btn btn-yellow clicked" type="button" value="联系我们" style="margin-right:20px;">
+			<input class="btn btn-yellow" type="button" value="人才招聘" style="margin-left:20px;"></div>
+		<div class="container">
+			<!-- 百度地图 -->
+			<div class="baidu-map" id="allmap"></div>
+			<div class="map-point clearfix">
+				<div class="pull-left text-center">
+					<img src="dist/img/weizhi.png" alt="weizhi"></div>
+				<div class="pull-right">
+					<h3>天津市南开区鞍山西道信诚大厦2607</h3>
+					<p>
+						Tianjin City, Nankai District Anshan West Road, Chengxin building 2607
+					</p>
+				</div>
+			</div>
+
+			<div class="join-contact">
+				<ul class="clearfix text-center">
+					<li>
+						<img src="dist/img/join-qq.png" alt="">
+						<p>QQ</p>
+						<p class="text-muted">3264094367 / 2898235792</p>
+					</li>
+					<li>
+						<img src="dist/img/join-phone.png" alt="">
+						<p>座机号</p>
+						<p class="text-muted">022－83586177</p>
+					</li>
+					<li>
+						<img src="dist/img/join-telephone.png" alt="">
+						<p>手机号</p>
+						<p class="text-muted">18622996008</p>
+					</li>
+					<li>
+						<img src="dist/img/join-email.png" alt="">
+						<p>邮箱</p>
+						<p class="text-muted">xiyou@xiyoumba.com</p>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+	<!-- 页脚 -->
+	<footer class="footer">
+		<div class="container">
+			<ul>
+				<li>
+					<img src="dist/img/sina.png" alt="sina"></li>
+				<li>
+					<a href="#">关注微博&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</a>
+				</li>
+				<li>
+					<img src="dist/img/weixin.png" alt="weixin"></li>
+				<li>
+					<a href="#">关注微信&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</a>
+				</li>
+				<li>
+					<img src="dist/img/qq.png" alt="qq"></li>
+				<li>
+					<a href="#">客服QQ群3545522</a>
+				</li>
+			</ul>
+			<span>西部教育XXX</span>
+		</div>
+	</footer>
+	<script type="text/javascript" src="dist/js/lib/jquery.min.js"></script>
+	<script type="text/javascript" src="dist/js/app.js"></script>
+	<script type="text/javascript">
+		// 百度地图API功能
+		var map = new BMap.Map("allmap");    // 创建Map实例
+		var point = new BMap.Point(117.171697,39.119643);//创建初始位置坐标点
+		map.centerAndZoom(point, 19);  // 初始化地图,设置中心点坐标和地图级别
+		map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+		map.setCurrentCity("天津");          // 设置地图显示的城市 此项是必须设置的
+		map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+
+		var marker = new BMap.Marker(point);  // 创建标注
+		map.addOverlay(marker);               // 将标注添加到地图中
+		marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+	</script>
+</body>
+</html>
