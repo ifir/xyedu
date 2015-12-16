@@ -38,6 +38,19 @@ body
 	z-index:999;
 	cursor:pointer;
 }
+.popup{
+	width:300px;
+	height:150px;
+	position:fixed;
+	z-index:10000;
+	left:50%;
+	top:50%;
+	margin:-75px 0 0 -150px;
+	background:#fff;
+	border:1px solid map-get($colorMaps,yellow);
+	@include radius(5px);
+
+}
 .clearfix:after
 {
     display: block;
@@ -830,6 +843,9 @@ nav
 
                 color: map-get($colorMaps,yellow);
             }
+            p{
+            	color:#fff;
+            }
         }
         .pull-left
         {
@@ -872,17 +888,4 @@ nav
             background: #fff;
         }
     }
-}
-.popup{
-	width:300px;
-	height:150px;
-	position:fixed;
-	z-index:10000;
-	left:50%;
-	top:50%;
-	margin:-75px 0 0 -150px;
-	background:#fff;
-	border:1px solid map-get($colorMaps,yellow);
-	@include radius(5px);
-
 }

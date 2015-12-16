@@ -36,9 +36,16 @@ $(function(){
 	})
 
 	//西游记事滚动
-
-
-
-
+	var listBox = $('#his-list-box');
+	var num1=110;
+	var timer=setInterval(function(){
+		num1 -= 1;
+		listBox.css('top',num1);	
+		if(listBox.css('top') == '-1100px'){
+			num1 = 110;
+			listBox.css('top',num1);
+		}
+			
+	},50);
 
 })

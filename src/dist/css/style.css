@@ -21,6 +21,21 @@ body {
   cursor: pointer;
 }
 
+.popup {
+  width: 300px;
+  height: 150px;
+  position: fixed;
+  z-index: 10000;
+  left: 50%;
+  top: 50%;
+  margin: -75px 0 0 -150px;
+  background: #fff;
+  border: 1px solid #f39801;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
 .clearfix:after {
   display: block;
   visibility: hidden;
@@ -709,6 +724,11 @@ nav li:last-child {
   color: #f39801;
 }
 
+.section-scroll .his-list .pull-left p,
+.section-scroll .his-list .pull-right p {
+  color: #fff;
+}
+
 .section-scroll .his-list .pull-left {
   text-align: right;
 }
@@ -742,19 +762,4 @@ nav li:last-child {
   height: 110px;
   margin-left: -1px;
   background: #fff;
-}
-
-.popup {
-  width: 300px;
-  height: 150px;
-  position: fixed;
-  z-index: 10000;
-  left: 50%;
-  top: 50%;
-  margin: -75px 0 0 -150px;
-  background: #fff;
-  border: 1px solid #f39801;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
 }
