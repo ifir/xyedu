@@ -717,12 +717,13 @@ nav
             position: relative;
             z-index: 5;
 
+            overflow: hidden;
+
             height: 50px;
 
-            border-bottom: 1px solid #ccc;
-
-            overflow: hidden;
             cursor: pointer;
+
+            border-bottom: 1px solid #ccc;
         }
         .pull-left
         {
@@ -751,30 +752,109 @@ nav
             background: url('../../dist/img/jiantou1.png') no-repeat center center;
             background-position: -22px 0;
         }
-        .job-name{
-        	margin-left:60px;
+        .job-name
+        {
+            margin-left: 60px;
         }
-        .job-num{
-        	position:absolute;
-        	right: 20px;
-        	z-index: 10;
+        .job-num
+        {
+            position: absolute;
+            z-index: 10;
+            right: 20px;
         }
         .list-active
         {
-            background: map-get($colorMaps,blue);
             color: #fff;
             border-bottom: 1px solid map-get($colorMaps,blue);
+            background: map-get($colorMaps,blue);
             .icon-span
             {
                 background-position: 0 0;
             }
         }
-        .job-explain{
-        	color: #666;
+        .job-explain
+        {
+            color: #666;
         }
-        .job-explain-require{
-        	padding:15px 0;
-        	border-bottom:1px dashed #ccc;
+        .job-explain-require
+        {
+            padding: 15px 0;
+
+            border-bottom: 1px dashed #ccc;
+        }
+    }
+}
+/* ===============西游记事=============== */
+.section-scroll
+{
+    overflow: hidden;
+
+    width: 100%;
+    height: 550px;
+
+    background: map-get($colorMaps, blue);
+    .his-list
+    {
+        position: relative;
+        z-index: 5;
+
+        width: 100%;
+        height: 110px;
+        .pull-left,
+        .pull-right
+        {
+            width: 530px;
+            margin-top: 20px;
+            > div
+            {
+                padding: 0 20px;
+            }
+            span
+            {
+                font-size: 20px;
+
+                color: map-get($colorMaps,yellow);
+            }
+        }
+        .pull-left
+        {
+            text-align: right;
+        }
+        .pull-right
+        {
+            text-align: left;
+        }
+        .his-point
+        {
+            position: absolute;
+            z-index: 15;
+            top: 50%;
+            left: 50%;
+
+            display: block;
+
+            width: 25px;
+            height: 25px;
+            margin-top: -12px;
+            margin-left: -12px;
+
+            background: map-get($colorMaps,yellow);
+
+            @include radius(50%);
+        }
+        .his-line
+        {
+            position: absolute;
+            z-index: 10;
+            left: 50%;
+
+            display: block;
+
+            width: 2px;
+            height: 110px;
+            margin-left: -1px;
+
+            background: #fff;
         }
     }
 }

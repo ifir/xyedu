@@ -602,10 +602,10 @@ nav li:last-child {
   line-height: 50px;
   position: relative;
   z-index: 5;
-  height: 50px;
-  border-bottom: 1px solid #ccc;
   overflow: hidden;
+  height: 50px;
   cursor: pointer;
+  border-bottom: 1px solid #ccc;
 }
 
 .section-join-info .job-box .pull-left {
@@ -637,14 +637,14 @@ nav li:last-child {
 
 .section-join-info .job-box .job-num {
   position: absolute;
-  right: 20px;
   z-index: 10;
+  right: 20px;
 }
 
 .section-join-info .job-box .list-active {
-  background: #3296ba;
   color: #fff;
   border-bottom: 1px solid #3296ba;
+  background: #3296ba;
 }
 
 .section-join-info .job-box .list-active .icon-span {
@@ -658,4 +658,71 @@ nav li:last-child {
 .section-join-info .job-box .job-explain-require {
   padding: 15px 0;
   border-bottom: 1px dashed #ccc;
+}
+
+/* ===============西游记事=============== */
+.section-scroll {
+  overflow: hidden;
+  width: 100%;
+  height: 550px;
+  background: #3296ba;
+}
+
+.section-scroll .his-list {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  height: 110px;
+}
+
+.section-scroll .his-list .pull-left,
+.section-scroll .his-list .pull-right {
+  width: 530px;
+  margin-top: 20px;
+}
+
+.section-scroll .his-list .pull-left > div,
+.section-scroll .his-list .pull-right > div {
+  padding: 0 20px;
+}
+
+.section-scroll .his-list .pull-left span,
+.section-scroll .his-list .pull-right span {
+  font-size: 20px;
+  color: #f39801;
+}
+
+.section-scroll .his-list .pull-left {
+  text-align: right;
+}
+
+.section-scroll .his-list .pull-right {
+  text-align: left;
+}
+
+.section-scroll .his-list .his-point {
+  position: absolute;
+  z-index: 15;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 25px;
+  height: 25px;
+  margin-top: -12px;
+  margin-left: -12px;
+  background: #f39801;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.section-scroll .his-list .his-line {
+  position: absolute;
+  z-index: 10;
+  left: 50%;
+  display: block;
+  width: 2px;
+  height: 110px;
+  margin-left: -1px;
+  background: #fff;
 }

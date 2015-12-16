@@ -4,6 +4,8 @@ var browserSync = require('browser-sync');
 var minjs = require('gulp-uglify');
 var mincss = require('gulp-minify-css');
 var minimg = require('gulp-imagemin');
+var changed = require('gulp-changed');//过滤变动的文件
+var plumber = require('gulp-plumber');//捕获处理任务中的错误
 //路径
 var scssPath = 'src/assets/scss/*.scss';
 var jsPath = 'src/assets/js/*.js';
@@ -12,6 +14,8 @@ var htmlPath = 'src/*.html';
 //编译scss文件输出css
 gulp.task('sass', function  () {
 	gulp.src(scssPath)
+	.pipe(plumber())
+	.pipe(changed('./src/dist/css'))
 	//outputStyle => Type: String Default: nested Values: nested, expanded, compact, compressed
 	.pipe(sass({outputStyle:'expanded'}))
 	.pipe(gulp.dest('./src/dist/css'))
@@ -19,16 +23,22 @@ gulp.task('sass', function  () {
 //js输出
 gulp.task('js', function  () {
 	gulp.src(jsPath)
+	.pipe(plumber())
+	.pipe(changed('./src/dist/js'))
 	.pipe(gulp.dest('./src/dist/js'))
 });
 //图片输出
 gulp.task('img', function  () {
 	gulp.src(imgPath)
+	.pipe(plumber())
+	.pipe(changed('./src/dist/img'))
 	.pipe(gulp.dest('./src/dist/img'))
 });
 //压缩css
 gulp.task('min:css', function  () {
 	gulp.src(scssPath)
+	.pipe(plumber())
+	.pipe(changed('./src/dist/css'))
 	.pipe(sass())
 	.pipe(mincss())
 	.pipe(gulp.dest('./src/dist/css'))
@@ -36,12 +46,16 @@ gulp.task('min:css', function  () {
 //压缩js
 gulp.task('min:js', function  () {
 	gulp.src(jsPath)
+	.pipe(plumber())
+	.pipe(changed('./src/dist/js'))
 	.pipe(minjs())
 	.pipe(gulp.dest('./src/dist/js'))
 });
 //压缩图片
 gulp.task('min:img', function  () {
 	gulp.src(imgPath)
+	.pipe(plumber())
+	.pipe(changed('./src/dist/img'))
 	.pipe(minimg())
 	.pipe(gulp.dest('./src/dist/img'))
 });
