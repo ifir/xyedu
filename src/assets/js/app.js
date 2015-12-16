@@ -20,9 +20,24 @@ $(function(){
 		});
 	});
 
+
+	$('.apply').on('click', function (){
+		var popup = $('.popup, .mask');
+		if($('.popup').hasClass('show')){
+			popup.removeClass('show');
+		}else{
+			popup.addClass('show');
+		}
+	})
+
+	$('.mask, .close-btn').on('click', function (){
+		var popup = $('.popup, .mask');
+		popup.removeClass('show');
+	})
+
 	//西游记事滚动
 
-	
+
 
 
 
