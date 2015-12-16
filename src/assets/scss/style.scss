@@ -49,8 +49,17 @@ body
 {
     color: map-get($colorMaps,yellow)!important;
 }
-.text-muted{
-	color:#666;
+.text-muted
+{
+    color: #666;
+}
+.hide
+{
+    display: none;
+}
+.show
+{
+    display: block;
 }
 ul,
 ol,
@@ -677,17 +686,95 @@ nav
             }
         }
     }
-    .join-contact {
-    	margin: 40px 0;
-    	li{
+    .join-contact
+    {
+        margin: 40px 0;
+        li
+        {
+            float: left;
 
-	    	float: left;
-	    	width: 261px;
-	    	border-right: 1px solid #ccc;
-	    	&:last-child{
-	    		border-right: 0;
-	    	}
-    	}
+            width: 261px;
 
+            border-right: 1px solid #ccc;
+            &:last-child
+            {
+                border-right: 0;
+            }
+        }
+    }
+    .job-box
+    {
+        width: 100%;
+        height: auto;
+        min-height: 300px;
+        margin: 40px 0;
+
+        border: 1px solid #ccc;
+        ul li
+        {
+            line-height: 50px;
+
+            position: relative;
+            z-index: 5;
+
+            height: 50px;
+
+            border-bottom: 1px solid #ccc;
+
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .pull-left
+        {
+            width: 320px;
+        }
+        .pull-right
+        {
+            width: 669px;
+            min-height: 300px;
+            padding: 25px 35px;
+
+            border-left: 1px solid #ccc;
+        }
+        .icon-span
+        {
+            position: absolute;
+            z-index: 10;
+            top: 15px;
+            left: 20px;
+
+            display: block;
+
+            width: 22px;
+            height: 22px;
+
+            background: url('../../dist/img/jiantou1.png') no-repeat center center;
+            background-position: -22px 0;
+        }
+        .job-name{
+        	margin-left:60px;
+        }
+        .job-num{
+        	position:absolute;
+        	right: 20px;
+        	z-index: 10;
+        }
+        .list-active
+        {
+            background: map-get($colorMaps,blue);
+            color: #fff;
+            border-bottom: 1px solid map-get($colorMaps,blue);
+            .icon-span
+            {
+                background-position: 0 0;
+            }
+        }
+        .job-explain{
+        	color: #666;
+        }
+        .job-explain-require{
+        	padding:15px 0;
+        	border-bottom:1px dashed #ccc;
+        }
     }
 }

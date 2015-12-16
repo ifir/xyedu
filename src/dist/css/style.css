@@ -32,6 +32,14 @@ body {
   color: #666;
 }
 
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
 ul,
 ol,
 li {
@@ -580,4 +588,74 @@ nav li:last-child {
 
 .section-join-info .join-contact li:last-child {
   border-right: 0;
+}
+
+.section-join-info .job-box {
+  width: 100%;
+  height: auto;
+  min-height: 300px;
+  margin: 40px 0;
+  border: 1px solid #ccc;
+}
+
+.section-join-info .job-box ul li {
+  line-height: 50px;
+  position: relative;
+  z-index: 5;
+  height: 50px;
+  border-bottom: 1px solid #ccc;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.section-join-info .job-box .pull-left {
+  width: 320px;
+}
+
+.section-join-info .job-box .pull-right {
+  width: 669px;
+  min-height: 300px;
+  padding: 25px 35px;
+  border-left: 1px solid #ccc;
+}
+
+.section-join-info .job-box .icon-span {
+  position: absolute;
+  z-index: 10;
+  top: 15px;
+  left: 20px;
+  display: block;
+  width: 22px;
+  height: 22px;
+  background: url("../../dist/img/jiantou1.png") no-repeat center center;
+  background-position: -22px 0;
+}
+
+.section-join-info .job-box .job-name {
+  margin-left: 60px;
+}
+
+.section-join-info .job-box .job-num {
+  position: absolute;
+  right: 20px;
+  z-index: 10;
+}
+
+.section-join-info .job-box .list-active {
+  background: #3296ba;
+  color: #fff;
+  border-bottom: 1px solid #3296ba;
+}
+
+.section-join-info .job-box .list-active .icon-span {
+  background-position: 0 0;
+}
+
+.section-join-info .job-box .job-explain {
+  color: #666;
+}
+
+.section-join-info .job-box .job-explain-require {
+  padding: 15px 0;
+  border-bottom: 1px dashed #ccc;
 }

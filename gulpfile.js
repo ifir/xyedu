@@ -5,10 +5,10 @@ var minjs = require('gulp-uglify');
 var mincss = require('gulp-minify-css');
 var minimg = require('gulp-imagemin');
 //路径
-var scssPath = './src/assets/scss/*.scss';
-var jsPath = './src/assets/js/*.js';
-var imgPath = './src/assets/img/*.*';
-var htmlPath = './src/*.html';
+var scssPath = 'src/assets/scss/*.scss';
+var jsPath = 'src/assets/js/*.js';
+var imgPath = 'src/assets/img/*.*';
+var htmlPath = 'src/*.html';
 //编译scss文件输出css
 gulp.task('sass', function  () {
 	gulp.src(scssPath)
@@ -61,7 +61,7 @@ gulp.task('watch',function (){
 	gulp.watch([htmlPath]);
 	gulp.watch([scssPath], ['sass']);
 	gulp.watch([imgPath], ['img']);
-	gulp.watch([imgPath], ['js']);
+	gulp.watch([jsPath], ['js']);
 });
 
 gulp.task('default', ['sass', 'js', 'img', 'watch']);
