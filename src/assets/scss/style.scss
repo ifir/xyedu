@@ -969,3 +969,52 @@ nav
         }
     }
 }
+
+.section-lingxing
+{
+    .lingxing-box
+    {
+        position: relative;
+
+        width: 33.333333%;
+        height: 600px;
+    }
+    .up,
+    .down,
+    .center-left,
+    .center-right
+    {
+        position: absolute;
+        left: 50%;
+
+        width: 157px;
+        height: 182px;
+
+        line-height: 182px;
+
+        font-size: 25px;
+        color:#fff;
+        
+
+        background: url('../../dist/img/liubian-lan.png') no-repeat center center;
+    }
+    .up
+    {
+        top: 20px;
+        margin-left: -76px;
+    }
+    .center-left{
+    	top:210px;
+    	margin-left: -167px;
+    }
+    .center-right{
+    	top:210px;
+    	margin-left: 10px;
+    	
+    }
+    .down
+    {
+        bottom: 20px;
+        margin-left: -76px;
+    }
+}

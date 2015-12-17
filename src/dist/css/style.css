@@ -820,3 +820,43 @@ nav li:last-child {
   margin-left: -1px;
   background: #fff;
 }
+
+.section-lingxing .lingxing-box {
+  position: relative;
+  width: 33.333333%;
+  height: 600px;
+}
+
+.section-lingxing .up,
+.section-lingxing .down,
+.section-lingxing .center-left,
+.section-lingxing .center-right {
+  position: absolute;
+  left: 50%;
+  width: 157px;
+  height: 182px;
+  line-height: 182px;
+  font-size: 25px;
+  color: #fff;
+  background: url("../../dist/img/liubian-lan.png") no-repeat center center;
+}
+
+.section-lingxing .up {
+  top: 20px;
+  margin-left: -76px;
+}
+
+.section-lingxing .center-left {
+  top: 210px;
+  margin-left: -167px;
+}
+
+.section-lingxing .center-right {
+  top: 210px;
+  margin-left: 10px;
+}
+
+.section-lingxing .down {
+  bottom: 20px;
+  margin-left: -76px;
+}
