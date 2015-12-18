@@ -110,6 +110,11 @@ a {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 .btn-yellow:hover,
@@ -257,6 +262,11 @@ nav li {
 
 nav li a {
   font-weight: bolder;
+  -webkit-transition: color 1s ease;
+  -moz-transition: color 1s ease;
+  -ms-transition: color 1s ease;
+  -o-transition: color 1s ease;
+  transition: color 1s ease;
 }
 
 nav li a:hover {
@@ -701,6 +711,16 @@ nav li:last-child {
   background: #3296ba;
 }
 
+.section-scroll .container > .text-center {
+  font-size: 20px;
+  width: 100px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  cursor: default;
+  color: #fff;
+  background: #f39801;
+}
+
 .section-scroll .caret-box {
   position: relative;
   width: 305px;
@@ -742,17 +762,7 @@ nav li:last-child {
   border-bottom: 20px solid #f39801;
 }
 
-.section-scroll > .text-center {
-  font-size: 20px;
-  width: 100px;
-  margin: 0 auto;
-  padding: 10px 20px;
-  cursor: default;
-  color: #fff;
-  background: #f39801;
-}
-
-.section-scroll .container {
+.section-scroll .his-container {
   overflow: hidden;
   height: 400px;
 }
@@ -821,24 +831,76 @@ nav li:last-child {
   background: #fff;
 }
 
+.section-lingxing {
+  width: 100%;
+}
+
 .section-lingxing .lingxing-box {
   position: relative;
   width: 33.333333%;
   height: 600px;
 }
 
+.section-lingxing .lingxing-box .text-center {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  background: #f39801;
+  padding: 15px 30px;
+  color: #fff;
+  font-size: 25px;
+  margin-left: -167px;
+}
+
 .section-lingxing .up,
 .section-lingxing .down,
 .section-lingxing .center-left,
-.section-lingxing .center-right {
+.section-lingxing .center-right,
+.section-lingxing .down-center {
+  font-size: 25px;
+  line-height: 182px;
+  position: absolute;
+  z-index: 100;
+  left: 50%;
+  width: 157px;
+  height: 182px;
+  cursor: pointer;
+  color: #fff;
+  background: url("../../dist/img/liubian-lan.png") no-repeat center center;
+  -webkit-transition: transform 1s ease;
+  -moz-transition: transform 1s ease;
+  -ms-transition: transform 1s ease;
+  -o-transition: transform 1s ease;
+  transition: transform 1s ease;
+}
+
+.section-lingxing .up:hover,
+.section-lingxing .down:hover,
+.section-lingxing .center-left:hover,
+.section-lingxing .center-right:hover,
+.section-lingxing .down-center:hover {
+  -webkit-transform: scale(1.2, 1.2);
+  -moz-transform: scale(1.2, 1.2);
+  -ms-transform: scale(1.2, 1.2);
+  -o-transform: scale(1.2, 1.2);
+  transform: scale(1.2, 1.2);
+  -webkit-transform-origin: center center;
+  -moz-transform-origin: center center;
+  -ms-transform-origin: center center;
+  -o-transform-origin: center center;
+  transform-origin: center center;
+}
+
+.section-lingxing .up-left,
+.section-lingxing .up-right,
+.section-lingxing .down-left,
+.section-lingxing .down-right {
   position: absolute;
   left: 50%;
   width: 157px;
   height: 182px;
-  line-height: 182px;
-  font-size: 25px;
-  color: #fff;
-  background: url("../../dist/img/liubian-lan.png") no-repeat center center;
+  cursor: pointer;
+  background: url("../../dist/img/liubian-hui.png") no-repeat center center;
 }
 
 .section-lingxing .up {
@@ -846,17 +908,30 @@ nav li:last-child {
   margin-left: -76px;
 }
 
-.section-lingxing .center-left {
+.section-lingxing .center-left,
+.section-lingxing .up-left {
   top: 210px;
   margin-left: -167px;
 }
 
-.section-lingxing .center-right {
+.section-lingxing .center-right,
+.section-lingxing .up-right {
   top: 210px;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
-.section-lingxing .down {
+.section-lingxing .down,
+.section-lingxing .down-center {
   bottom: 20px;
   margin-left: -76px;
+}
+
+.section-lingxing .down-left {
+  bottom: 20px;
+  margin-left: -252px;
+}
+
+.section-lingxing .down-right {
+  bottom: 20px;
+  margin-left: 101px;
 }
