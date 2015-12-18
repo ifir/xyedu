@@ -842,14 +842,14 @@ nav li:last-child {
 }
 
 .section-lingxing .lingxing-box .text-center {
+  font-size: 25px;
   position: absolute;
   top: 20px;
   left: 50%;
-  background: #f39801;
+  margin-left: -167px;
   padding: 15px 30px;
   color: #fff;
-  font-size: 25px;
-  margin-left: -167px;
+  background: #f39801;
 }
 
 .section-lingxing .up,
@@ -935,3 +935,6 @@ nav li:last-child {
   bottom: 20px;
   margin-left: 101px;
 }
+
+/*资讯页面*/
+/* 轮播图 */

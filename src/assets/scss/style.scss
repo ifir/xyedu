@@ -167,7 +167,6 @@ a
     border: 0;
     outline: none;
     background: transparent;
-
 }
 .btn-yellow
 {
@@ -177,7 +176,7 @@ a
     border: 1px solid map-get($colorMaps,yellow);
 
     @include radius(5px);
-     @include transition(all 1s ease);
+    @include transition(all 1s ease);
 }
 .btn-yellow:hover,
 .clicked
@@ -345,6 +344,7 @@ nav
         a
         {
             font-weight: bolder;
+
             @include transition(color 1s ease);
             &:hover
             {
@@ -933,7 +933,6 @@ nav
             border-bottom: 20px solid map-get($colorMaps,yellow);
         }
     }
-    
     .his-container
     {
         overflow: hidden;
@@ -1012,25 +1011,27 @@ nav
 
 .section-lingxing
 {
-
-	width:100%;
-	
+    width: 100%;
     .lingxing-box
     {
         position: relative;
 
         width: 33.333333%;
         height: 600px;
-        .text-center{
-		position:absolute;
-		top: 20px;
-		left: 50%;
-		background:map-get($colorMaps,yellow);
-		padding:15px 30px;
-		color: #fff;
-		font-size: 25px;
-		margin-left:-167px;
-	}
+        .text-center
+        {
+            font-size: 25px;
+
+            position: absolute;
+            top: 20px;
+            left: 50%;
+
+            margin-left: -167px;
+            padding: 15px 30px;
+
+            color: #fff;
+            background: map-get($colorMaps,yellow);
+        }
     }
     .up,
     .down,
@@ -1115,3 +1116,5 @@ nav
         margin-left: 101px;
     }
 }
+/*资讯页面*/
+/* 轮播图 */
