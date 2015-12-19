@@ -110,11 +110,13 @@ body
 .pull-left
 {
     float: left;
+
     @include sizing;
 }
 .pull-right
 {
     float: right;
+
     @include sizing;
 }
 .text-center
@@ -162,6 +164,7 @@ a
 
     width: 1060px;
     margin: 0 auto;
+
     @include sizing;
 }
 .btn
@@ -1133,44 +1136,48 @@ nav
             font-size: 18px;
             line-height: 50px;
 
-            height: 50px;
+            position: relative;
 
+            height: 50px;
 
             color: #fff;
             border-bottom: 1px solid #fff;
             background: map-get($colorMaps,blue);
+            i
+            {
+                position: absolute;
+                top: 7px;
+                left: 55px;
 
-            position:relative;
-
-            i{
                 display: block;
-                position:absolute;
-                top:7px;
+
                 width: 35px;
                 height: 35px;
-                background:url('../../dist/img/logo-xiao.png') no-repeat center center;
-                background-size:35px 35px;
-                left: 55px;
+
+                background: url('../../dist/img/logo-xiao.png') no-repeat center center;
+                background-size: 35px 35px;
             }
-
-
         }
-        ul{
-            padding:0 10px;
+        ul
+        {
+            padding: 0 10px;
         }
-        li{
-             line-height: 50px;
+        li
+        {
+            line-height: 50px;
 
             height: 50px;
-            
 
-            border-bottom:1px dashed #ccc;
-            a{
-                color:map-get($colorMaps,black);
+            border-bottom: 1px dashed #ccc;
+            a
+            {
                 display: block;
+
+                color: map-get($colorMaps,black);
             }
-            &:last-child{
-                border-bottom:none;
+            &:last-child
+            {
+                border-bottom: none;
             }
         }
     }
@@ -1178,13 +1185,39 @@ nav
     {
         width: 825px;
         min-height: 500px;
-        h4{
+        h4
+        {
             font-weight: normal;
-            height: 50px;
             line-height: 50px;
+
+            height: 50px;
             margin: 0;
-            padding:0 20px;
-            border-bottom:1px solid map-get($colorMaps,blue);
+            padding: 0 20px;
+
+            border-bottom: 1px solid map-get($colorMaps,blue);
+        }
+        ul{
+            li{
+                position:relative;
+            }
+            .title-span{
+                text-align: left;
+                margin-left: 50px;
+            }
+            .time{
+                text-align: right;
+            }
+            padding:20px;
+            .icon-lingxing{
+                display: block;
+                position:absolute;
+                width: 30px;
+                height: 30px;
+                left: 10px;
+                top:0;
+                background:url('../../dist/img/sibian.png') no-repeat center center;
+                background-size:30px 30px;
+            }
         }
     }
 }

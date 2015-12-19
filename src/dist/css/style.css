@@ -955,22 +955,22 @@ nav li:last-child {
 .section-news .pull-left > div {
   font-size: 18px;
   line-height: 50px;
+  position: relative;
   height: 50px;
   color: #fff;
   border-bottom: 1px solid #fff;
   background: #3296ba;
-  position: relative;
 }
 
 .section-news .pull-left > div i {
-  display: block;
   position: absolute;
   top: 7px;
+  left: 55px;
+  display: block;
   width: 35px;
   height: 35px;
   background: url("../../dist/img/logo-xiao.png") no-repeat center center;
   background-size: 35px 35px;
-  left: 55px;
 }
 
 .section-news .pull-left ul {
@@ -984,8 +984,8 @@ nav li:last-child {
 }
 
 .section-news .pull-left li a {
-  color: #656565;
   display: block;
+  color: #656565;
 }
 
 .section-news .pull-left li:last-child {
@@ -999,9 +999,37 @@ nav li:last-child {
 
 .section-news .pull-right h4 {
   font-weight: normal;
-  height: 50px;
   line-height: 50px;
+  height: 50px;
   margin: 0;
   padding: 0 20px;
   border-bottom: 1px solid #3296ba;
+}
+
+.section-news .pull-right ul {
+  padding: 20px;
+}
+
+.section-news .pull-right ul li {
+  position: relative;
+}
+
+.section-news .pull-right ul .title-span {
+  text-align: left;
+  margin-left: 50px;
+}
+
+.section-news .pull-right ul .time {
+  text-align: right;
+}
+
+.section-news .pull-right ul .icon-lingxing {
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 10px;
+  top: 0;
+  background: url("../../dist/img/sibian.png") no-repeat center center;
+  background-size: 30px 30px;
 }
