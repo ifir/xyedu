@@ -49,7 +49,30 @@ $(function(){
 	},50);
 
 
-	
-
+	//资讯列表切换
+	$('#news-ul li').each(function (index){
+		$(this).on('click',function(){
+			var con = $('#news-con .hide');
+			$('#news-ul li').removeClass('active');
+			$(this).addClass('active');
+			con.removeClass('show');
+			con.eq(index).addClass('show');
+		});	
+	});
+	$('#news-ul').on('click', 'li', function(){
+		var value = $(this).text();
+		var spanTitle = $('#news-con h4 span');
+		spanTitle.text(value);
+	})
 	
 })
+
+function List(opt){
+	this.ele = $('"'+opt+'"');
+	this.con = $('"'+opt+'"');
+	this.cur = opt;
+
+}
+List.prototype.eachList = function (){
+	
+}

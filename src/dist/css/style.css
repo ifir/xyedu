@@ -1008,28 +1008,55 @@ nav li:last-child {
 
 .section-news .pull-right ul {
   padding: 20px;
+  color: #656565;
 }
 
 .section-news .pull-right ul li {
   position: relative;
+  height: 30px;
+  line-height: 30px;
+  padding: 10px 0;
 }
 
 .section-news .pull-right ul .title-span {
-  text-align: left;
   margin-left: 50px;
+  text-align: left;
 }
 
 .section-news .pull-right ul .time {
-  text-align: right;
+  position: absolute;
+  right: 0;
+  top: 10px;
 }
 
 .section-news .pull-right ul .icon-lingxing {
-  display: block;
   position: absolute;
+  top: 10px;
+  left: 0;
+  display: block;
   width: 30px;
   height: 30px;
-  left: 10px;
-  top: 0;
   background: url("../../dist/img/sibian.png") no-repeat center center;
   background-size: 30px 30px;
+}
+
+.page {
+  padding: 20px;
+}
+
+.page span {
+  display: inline-block;
+  padding: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.page span:hover {
+  background: #ccc;
+  color: #fff;
+}
+
+.this-page {
+  background: #ccc;
+  color: #fff;
 }

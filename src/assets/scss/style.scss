@@ -1196,28 +1196,60 @@ nav
 
             border-bottom: 1px solid map-get($colorMaps,blue);
         }
-        ul{
-            li{
-                position:relative;
+        ul
+        {
+            padding: 20px;
+            color:map-get($colorMaps,black);
+            li
+            {
+                position: relative;
+                height: 30px;
+                line-height: 30px;
+                padding:10px 0;
             }
-            .title-span{
-                text-align: left;
+            .title-span
+            {
                 margin-left: 50px;
+
+                text-align: left;
             }
-            .time{
-                text-align: right;
-            }
-            padding:20px;
-            .icon-lingxing{
-                display: block;
+            .time
+            {
                 position:absolute;
+                right: 0;
+                top:10px;
+            }
+            .icon-lingxing
+            {
+                position: absolute;
+                top: 10px;
+                left: 0;
+
+                display: block;
+
                 width: 30px;
                 height: 30px;
-                left: 10px;
-                top:0;
-                background:url('../../dist/img/sibian.png') no-repeat center center;
-                background-size:30px 30px;
+
+                background: url('../../dist/img/sibian.png') no-repeat center center;
+                background-size: 30px 30px;
             }
         }
     }
+}
+.page{
+    padding:20px;
+    span{
+        display: inline-block;
+        padding:10px;
+        border:1px solid #ccc;
+        cursor: pointer;
+        &:hover{
+            background:#ccc;
+            color:#fff;
+        }
+    }
+}
+.this-page{
+    background:#ccc;
+            color:#fff;
 }
