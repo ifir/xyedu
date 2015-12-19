@@ -110,10 +110,12 @@ body
 .pull-left
 {
     float: left;
+    @include sizing;
 }
 .pull-right
 {
     float: right;
+    @include sizing;
 }
 .text-center
 {
@@ -152,7 +154,7 @@ a
 }
 .active a
 {
-    color: map-get($colorMaps,blue);
+    color: map-get($colorMaps,blue)!important;
 }
 .container
 {
@@ -160,6 +162,7 @@ a
 
     width: 1060px;
     margin: 0 auto;
+    @include sizing;
 }
 .btn
 {
@@ -1116,5 +1119,72 @@ nav
         margin-left: 101px;
     }
 }
-/*资讯页面*/
+/*==============资讯页面============*/
 /* 轮播图 */
+
+/*资讯新闻*/
+.section-news
+{
+    .pull-left
+    {
+        width: 235px;
+        > div
+        {
+            font-size: 18px;
+            line-height: 50px;
+
+            height: 50px;
+
+
+            color: #fff;
+            border-bottom: 1px solid #fff;
+            background: map-get($colorMaps,blue);
+
+            position:relative;
+
+            i{
+                display: block;
+                position:absolute;
+                top:7px;
+                width: 35px;
+                height: 35px;
+                background:url('../../dist/img/logo-xiao.png') no-repeat center center;
+                background-size:35px 35px;
+                left: 55px;
+            }
+
+
+        }
+        ul{
+            padding:0 10px;
+        }
+        li{
+             line-height: 50px;
+
+            height: 50px;
+            
+
+            border-bottom:1px dashed #ccc;
+            a{
+                color:map-get($colorMaps,black);
+                display: block;
+            }
+            &:last-child{
+                border-bottom:none;
+            }
+        }
+    }
+    .pull-right
+    {
+        width: 825px;
+        min-height: 500px;
+        h4{
+            font-weight: normal;
+            height: 50px;
+            line-height: 50px;
+            margin: 0;
+            padding:0 20px;
+            border-bottom:1px solid map-get($colorMaps,blue);
+        }
+    }
+}
