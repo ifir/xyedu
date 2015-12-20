@@ -1,5 +1,5 @@
 $(function(){
-	//首页金牌名师滚动事件
+	//首页金牌名师自动切换事件
 	var Index = 0;
 	
 	var timer2 = setInterval(function(){
@@ -66,8 +66,8 @@ $(function(){
 		}
 			
 	},50);
-
-
+	//资讯轮播图
+	
 	//资讯列表切换
 	var newsList = new List({
 		ele: $('#news-ul li'),
