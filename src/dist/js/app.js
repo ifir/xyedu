@@ -1,6 +1,29 @@
 $(function(){
 	//首页金牌名师滚动事件
+	var Index = 0;
+	
+	var timer2 = setInterval(function(){
+			Index++;
+			indexEach();
+			if(Index > 3){
+				Index = 0;	
+				indexEach();
+			}
 
+		},5000);
+	$('#index-btn span').each(function (index){
+		$(this).on('click',function(){
+			Index = index;
+			indexEach();
+		});	
+	});
+
+	function indexEach(){
+		$('#index-btn span').removeClass('cur');
+		$('#index-btn span').eq(Index).addClass('cur');
+		$('.photo-box').removeClass('index');
+		$('.photo-box').eq(Index).addClass('index');
+	}
 	//加入我们按钮切换	
 	var joinList = new List({
 		ele: $('.join-line input'),
