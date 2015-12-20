@@ -1,23 +1,19 @@
 $(function(){
-	//加入我们按钮切换
-	$('.join-line input').each(function (index){
-		$(this).on('click',function(){
-			var con = $('.section-join-info .container');
-			$('.join-line input').removeClass('clicked');
-			$(this).addClass('clicked');
-			con.removeClass('show');
-			con.eq(index).addClass('show');
-		});	
+	//首页金牌名师滚动事件
+
+	//加入我们按钮切换	
+	var joinList = new List({
+		ele: $('.join-line input'),
+		con: $('.section-join-info .container'),
+		cur: 'clicked',
+		showed: 'show'
 	});
 	//招聘职位切换
-	$('#job-box-ul li').each(function(index){
-		$(this).on('click', function (){
-			var con = $('#job-explain .hide');
-			$('#job-box-ul li').removeClass('list-active');
-			$(this).addClass('list-active');
-			con.removeClass('show');
-			con.eq(index).addClass('show');
-		});
+	var jobList = new List({
+		ele: $('#job-box-ul li'),
+		con: $('#job-explain .hide'),
+		cur: 'list-active',
+		showed: 'show'
 	});
 
 
@@ -50,14 +46,11 @@ $(function(){
 
 
 	//资讯列表切换
-	$('#news-ul li').each(function (index){
-		$(this).on('click',function(){
-			var con = $('#news-con .hide');
-			$('#news-ul li').removeClass('active');
-			$(this).addClass('active');
-			con.removeClass('show');
-			con.eq(index).addClass('show');
-		});	
+	var newsList = new List({
+		ele: $('#news-ul li'),
+		con: $('#news-con .hide'),
+		cur: 'active',
+		showed: 'show'
 	});
 	$('#news-ul').on('click', 'li', function(){
 		var value = $(this).text();
@@ -68,11 +61,22 @@ $(function(){
 })
 
 function List(opt){
-	this.ele = $('"'+opt+'"');
-	this.con = $('"'+opt+'"');
-	this.cur = opt;
+	this.ele = opt.ele;
+	this.con = opt.con;
+	this.cur = opt.cur;
+	this.showed = opt.showed;
+	this.eachList();
 
 }
 List.prototype.eachList = function (){
-	
+	var _this = this;
+	_this.ele.each(function (index){
+		$(this).on('click',function(){
+			var con = _this.con;
+			_this.ele.removeClass(_this.cur);
+			$(this).addClass(_this.cur);
+			con.removeClass(_this.showed);
+			con.eq(index).addClass(_this.showed);
+		});	
+	});
 }
