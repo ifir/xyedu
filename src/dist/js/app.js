@@ -5,7 +5,7 @@ $(function(){
 	var timer2 = setInterval(function(){
 			Index++;
 			indexEach();
-			if(Index > 3){
+			if(Index > 1){
 				Index = 0;	
 				indexEach();
 			}
