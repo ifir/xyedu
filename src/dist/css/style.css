@@ -1092,7 +1092,7 @@ nav li:last-child {
 }
 
 .section-lingxing .up {
-  top: 20px;
+  top: 60px;
   margin-left: -76px;
 }
 
@@ -1105,22 +1105,22 @@ nav li:last-child {
 .section-lingxing .center-right,
 .section-lingxing .up-right {
   top: 210px;
-  margin-left: 20px;
+  margin-left: 15px;
 }
 
 .section-lingxing .down,
 .section-lingxing .down-center {
-  bottom: 20px;
+  bottom: 60px;
   margin-left: -76px;
 }
 
 .section-lingxing .down-left {
-  bottom: 20px;
+  bottom: 60px;
   margin-left: -252px;
 }
 
 .section-lingxing .down-right {
-  bottom: 20px;
+  bottom: 60px;
   margin-left: 101px;
 }
 
