@@ -424,6 +424,38 @@ nav
             @include radius(50%);
         }
     }
+    .bs-info-box{
+        margin:20px 0;
+        .pull-left{
+            width: 40%;
+        }
+        .pull-right{
+            width: 60%;
+        }
+        .blue-box{
+            width: 250px;
+            height: 150px;
+            border:2px solid map-get($colorMaps,blue);
+            color: map-get($colorMaps,blue);
+            margin-left: 130px;
+            h3, p{
+                font-size: 30px;
+
+            }
+            h3{
+                font-weight: normal;
+                padding:20px 0;
+                margin:0;
+            }
+            p{
+                margin:0;
+            }
+        }
+        .blue-box-p{
+            color:map-get($colorMaps,blue);
+            margin: 20px 0;
+        }
+    }
     .yel
     {
         width: 40%;

@@ -337,6 +337,45 @@ nav li:last-child {
   border-radius: 50%;
 }
 
+.section-header .bs-info-box {
+  margin: 20px 0;
+}
+
+.section-header .bs-info-box .pull-left {
+  width: 40%;
+}
+
+.section-header .bs-info-box .pull-right {
+  width: 60%;
+}
+
+.section-header .bs-info-box .blue-box {
+  width: 250px;
+  height: 150px;
+  border: 2px solid #3296ba;
+  color: #3296ba;
+  margin-left: 130px;
+}
+
+.section-header .bs-info-box .blue-box h3, .section-header .bs-info-box .blue-box p {
+  font-size: 30px;
+}
+
+.section-header .bs-info-box .blue-box h3 {
+  font-weight: normal;
+  padding: 20px 0;
+  margin: 0;
+}
+
+.section-header .bs-info-box .blue-box p {
+  margin: 0;
+}
+
+.section-header .bs-info-box .blue-box-p {
+  color: #3296ba;
+  margin: 20px 0;
+}
+
 .section-header .yel {
   width: 40%;
   position: relative;
