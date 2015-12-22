@@ -339,10 +339,48 @@ nav li:last-child {
 
 .section-header .yel {
   width: 40%;
+  position: relative;
 }
 
 .section-header .yel .text-left {
   color: #3296ba;
+}
+
+.section-header .yel .yel-box-jt {
+  position: relative;
+  display: block;
+  width: 6px;
+  height: 150px;
+  background: #f39801;
+  margin-left: 255px;
+  z-index: 10;
+}
+
+.section-header .yel .yel-box-jt2 {
+  position: relative;
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 60px solid #f39801;
+  margin-left: 238px;
+  z-index: 5;
+  top: -20px;
+}
+
+.section-header .yel .yel-box-jt2:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #fff;
+  top: -60px;
+  left: -20px;
 }
 
 .section-header .jiahao {

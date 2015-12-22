@@ -427,8 +427,44 @@ nav
     .yel
     {
         width: 40%;
+        position:relative;
         .text-left{
             color:map-get($colorMaps,blue);
+        }
+        .yel-box-jt{
+            position:relative;
+            display: block;
+            width: 6px;
+            height: 150px;
+            background:map-get($colorMaps,yellow);
+            margin-left: 255px;
+            z-index: 10;
+
+        }
+        .yel-box-jt2{
+            position:relative;
+            display: block;
+            content: '';
+            width: 0;
+            height: 0;
+            border-left:20px solid transparent;
+            border-right:20px solid transparent;
+            border-top:60px solid map-get($colorMaps,yellow);
+            margin-left: 238px;
+            z-index: 5;
+            top:-20px;
+            &:before{
+                content: '';
+                position:absolute;
+                display: block;
+                width: 0;
+                height: 0;
+                border-left:20px solid transparent;
+                border-right:20px solid transparent;
+                border-top:20px solid #fff;
+                top:-60px;
+                left:-20px;
+            }
         }
     }
     .jiahao
