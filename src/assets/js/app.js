@@ -1,4 +1,11 @@
 $(function(){
+	//首页面试笔试切换
+	var mbList = new List({
+		ele: $('#mb-btn input'),
+		con: $('.list-box'),
+		cur: 'clicked',
+		showed: 'show'
+	});
 	//首页金牌名师自动切换事件
 	var Index = 0;
 	

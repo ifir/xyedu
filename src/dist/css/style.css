@@ -63,6 +63,10 @@ body {
   text-align: center;
 }
 
+.text-left {
+  text-align: left;
+}
+
 .text-yellow {
   color: #f39801 !important;
 }
@@ -140,6 +144,7 @@ a {
   border-radius: 50px;
 }
 
+/*首页*/
 /* =================导航栏============== */
 .navbar {
   width: 100%;
@@ -330,6 +335,62 @@ nav li:last-child {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
+}
+
+.section-header .yel {
+  width: 40%;
+}
+
+.section-header .yel .text-left {
+  color: #3296ba;
+}
+
+.section-header .jiahao {
+  position: relative;
+  height: 194px;
+  width: 20%;
+}
+
+.section-header .jiahao .heng,
+.section-header .jiahao .shu {
+  position: absolute;
+  display: block;
+  background: #3296ba;
+  left: 50%;
+  top: 50%;
+}
+
+.section-header .jiahao .heng {
+  width: 120px;
+  height: 18px;
+  margin: -9px 0 0 -60px;
+  z-index: 5;
+}
+
+.section-header .jiahao .shu {
+  width: 18px;
+  height: 120px;
+  margin: -60px 0 0 -9px;
+  z-index: 6;
+}
+
+.section-header .yel-box {
+  width: 330px;
+  height: 190px;
+  color: #3296ba;
+  border: 2px solid #f39801;
+}
+
+.section-header .yel-box h3 {
+  font-size: 45px;
+  font-weight: normal;
+  margin: 0;
+  padding: 30px 0 10px 0;
+}
+
+.section-header .yel-box p {
+  font-size: 35px;
+  margin: 10px 0;
 }
 
 .section-header .flow-title {

@@ -123,6 +123,9 @@ body
 {
     text-align: center;
 }
+.text-left{
+    text-align: left;
+}
 .text-yellow
 {
     color: map-get($colorMaps,yellow)!important;
@@ -198,6 +201,7 @@ a
 
     @include radius(50px);
 }
+/*首页*/
 /* =================导航栏============== */
 .navbar
 {
@@ -420,6 +424,66 @@ nav
             @include radius(50%);
         }
     }
+    .yel
+    {
+        width: 40%;
+        .text-left{
+            color:map-get($colorMaps,blue);
+        }
+    }
+    .jiahao
+    {
+        position: relative;
+        height: 194px;
+        width: 20%;
+        .heng,
+        .shu
+        {
+            position: absolute;
+
+            display: block;
+
+            background: map-get($colorMaps,blue);
+            left:50%;
+            top:50%;
+        }
+        .heng
+        {
+            width: 120px;
+            height: 18px;
+            margin:-9px 0 0 -60px;
+            z-index: 5;
+
+        }
+        .shu
+        {
+            width: 18px;
+            height: 120px;
+            margin:-60px 0 0 -9px;
+            z-index: 6;
+        }
+    }
+    .yel-box
+    {
+        width: 330px;
+        height: 190px;        
+        color: map-get($colorMaps,blue);
+        border: 2px solid map-get($colorMaps,yellow);
+        h3
+        {
+            font-size: 45px;
+            font-weight: normal;
+
+            margin: 0;
+            padding: 30px 0 10px 0;
+        }
+        p
+        {
+            font-size: 35px;
+
+            margin: 10px 0;
+        }
+    }
     .flow-title
     {
         line-height: 70px;
@@ -472,19 +536,21 @@ nav
         top: 190px;
         left: 0;
 
-
         width: 1060px;
         height: 480px;
 
         opacity: 0;
-        filter: alpha(opacity=0);
 
+        filter: alpha(opacity=0);
         @include scale(1.1,1.1);
         @include transition(all 1s ease);
     }
-    .index{
+    .index
+    {
         z-index: 200;
+
         opacity: 1;
+
         filter: alpha(opacity=100);
         @include scale(1,1);
     }
@@ -1299,5 +1365,3 @@ nav
     color: #fff;
     background: #ccc;
 }
-
-
