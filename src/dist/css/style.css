@@ -1348,6 +1348,34 @@ nav li:last-child {
   background-size: 30px 30px;
 }
 
+.section-news .news-detail {
+  display: none;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.section-news .news-detail h3 {
+  color: #454545;
+}
+
+.section-news .news-detail p {
+  text-indent: 33px;
+  line-height: 30px;
+}
+
+.section-news .news-detail #close-news {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  color: #3296ba;
+  padding: 5px 10px;
+  border: 1px solid #3296ba;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
 .page {
   padding: 20px;
 }

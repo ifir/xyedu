@@ -1581,6 +1581,28 @@ nav
             }
         }
     }
+    .news-detail{
+        display: none;
+        padding:10px 20px;
+        position:relative;
+        h3{
+            color:#454545;
+        }
+        p{
+            text-indent: 33px;
+            line-height: 30px;
+        }
+        #close-news{
+            position:absolute;
+            right: 20px;
+            top: 10px;
+            color:map-get($colorMaps,blue);
+            padding:5px 10px;
+            border:1px solid map-get($colorMaps,blue);
+            cursor: pointer;
+            @include radius(5px)
+        }
+    }   
 }
 .page
 {

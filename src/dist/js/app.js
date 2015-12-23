@@ -137,6 +137,14 @@ $(function(){
 		var spanTitle = $('#news-con h4 span');
 		spanTitle.text(value);
 	})
+	$('#all-news-box a').on('click', function (){
+		$('#all-news-box').hide();
+		$('#news-detail').show();
+	})
+	$('#close-news, #news-ul li').on('click', function(){
+		$('#all-news-box').show();
+		$('#news-detail').hide();
+	})
 	
 })
 
