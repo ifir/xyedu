@@ -44,7 +44,14 @@ $colorMaps: (blue:#3296ba,yellow:#f39801,black:#656565);
          -o-transform-origin: $value;
             transform-origin: $value;
 }
-
+@mixin rotate($value...)
+{
+    -webkit-transform: rotate($value);
+       -moz-transform: rotate($value);
+        -ms-transform: rotate($value);
+         -o-transform: rotate($value);
+            transform: rotate($value);
+}
 @mixin transition($value...)
 {
     -webkit-transition: $value;
@@ -808,6 +815,14 @@ nav
         {
             width: 210px;
             height: 210px;
+
+            @include origin(center center);
+            @include rotate(0deg);
+            @include transition(all 1s ease);
+            &:hover
+            {
+                @include rotate(360deg);
+            }
         }
         h4
         {
