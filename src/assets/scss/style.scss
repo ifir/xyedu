@@ -123,7 +123,8 @@ body
 {
     text-align: center;
 }
-.text-left{
+.text-left
+{
     text-align: left;
 }
 .text-yellow
@@ -424,117 +425,146 @@ nav
             @include radius(50%);
         }
     }
-    .bs-info-box{
-        margin:20px 0;
-        .pull-left{
+    .bs-info-box
+    {
+        margin: 20px 0;
+        .pull-left
+        {
             width: 40%;
         }
-        .pull-right{
+        .pull-right
+        {
             width: 60%;
         }
-        .blue-box{
+        .blue-box
+        {
             width: 250px;
             height: 150px;
-            border:2px solid map-get($colorMaps,blue);
-            color: map-get($colorMaps,blue);
             margin-left: 130px;
-            h3, p{
-                font-size: 30px;
 
+            color: map-get($colorMaps,blue);
+            border: 2px solid map-get($colorMaps,blue);
+            h3,
+            p
+            {
+                font-size: 30px;
             }
-            h3{
+            h3
+            {
                 font-weight: normal;
-                padding:20px 0;
-                margin:0;
+
+                margin: 0;
+                padding: 20px 0;
             }
-            p{
-                margin:0;
+            p
+            {
+                margin: 0;
             }
         }
-        .blue-box-p{
-            color:map-get($colorMaps,blue);
+        .blue-box-p
+        {
             margin: 20px 0;
+
+            color: map-get($colorMaps,blue);
         }
     }
     .yel
     {
+        position: relative;
+
         width: 40%;
-        position:relative;
-        .text-left{
-            color:map-get($colorMaps,blue);
+        .text-left
+        {
+            color: map-get($colorMaps,blue);
         }
-        .yel-box-jt{
-            position:relative;
-            display: block;
-            width: 6px;
-            height: 150px;
-            background:map-get($colorMaps,yellow);
-            margin-left: 255px;
+        .yel-box-jt
+        {
+            position: relative;
             z-index: 10;
 
-        }
-        .yel-box-jt2{
-            position:relative;
             display: block;
-            content: '';
+
+            width: 6px;
+            height: 150px;
+            margin-left: 255px;
+
+            background: map-get($colorMaps,yellow);
+        }
+        .yel-box-jt2
+        {
+            position: relative;
+            z-index: 5;
+            top: -20px;
+
+            display: block;
+
             width: 0;
             height: 0;
-            border-left:20px solid transparent;
-            border-right:20px solid transparent;
-            border-top:60px solid map-get($colorMaps,yellow);
             margin-left: 238px;
-            z-index: 5;
-            top:-20px;
-            &:before{
-                content: '';
-                position:absolute;
+
+            content: '';
+
+            border-top: 60px solid map-get($colorMaps,yellow);
+            border-right: 20px solid transparent;
+            border-left: 20px solid transparent;
+            &:before
+            {
+                position: absolute;
+                top: -60px;
+                left: -20px;
+
                 display: block;
+
                 width: 0;
                 height: 0;
-                border-left:20px solid transparent;
-                border-right:20px solid transparent;
-                border-top:20px solid #fff;
-                top:-60px;
-                left:-20px;
+
+                content: '';
+
+                border-top: 20px solid #fff;
+                border-right: 20px solid transparent;
+                border-left: 20px solid transparent;
             }
         }
     }
     .jiahao
     {
         position: relative;
-        height: 194px;
+
         width: 20%;
+        height: 194px;
         .heng,
         .shu
         {
             position: absolute;
+            top: 50%;
+            left: 50%;
 
             display: block;
 
             background: map-get($colorMaps,blue);
-            left:50%;
-            top:50%;
         }
         .heng
         {
-            width: 120px;
-            height: 18px;
-            margin:-9px 0 0 -60px;
             z-index: 5;
 
+            width: 120px;
+            height: 18px;
+            margin: -9px 0 0 -60px;
         }
         .shu
         {
+            z-index: 6;
+
             width: 18px;
             height: 120px;
-            margin:-60px 0 0 -9px;
-            z-index: 6;
+            margin: -60px 0 0 -9px;
         }
     }
     .yel-box
     {
         width: 330px;
-        height: 190px;        
+        height: 190px;
+
         color: map-get($colorMaps,blue);
         border: 2px solid map-get($colorMaps,yellow);
         h3
@@ -1294,6 +1324,104 @@ nav
 }
 /*==============资讯页面============*/
 /* 轮播图 */
+#banner
+{
+    overflow: hidden;
+
+    width: 100%;
+    height: 440px;
+    margin-bottom: 30px;
+}
+#banner .bannerCon
+{
+    position: relative;
+
+    width: 1060px;
+    height: 440px;
+    margin: 0 auto;
+
+    background: blue;
+}
+#banner .bannerCon .before
+{
+    position: absolute;
+    z-index: 333;
+    bottom: 0;
+    left: -600px;
+
+    width: 600px;
+    height: 440px;
+
+    background: rgba(0,0,0,.7);
+}
+#banner .bannerCon .before img
+{
+    position: absolute;
+    top: 175px;
+    right: 20px;
+
+    cursor: pointer;
+}
+#banner .bannerCon .after
+{
+    position: absolute;
+    z-index: 333;
+    right: -600px;
+    bottom: 0;
+
+    width: 600px;
+    height: 440px;
+
+    background: rgba(0,0,0,.7);
+}
+#banner .bannerCon .after img
+{
+    position: absolute;
+    top: 175px;
+    left: 20px;
+
+    cursor: pointer;
+}
+#banner .bannerCon .scroll
+{
+    position: relative;
+    left: -1060px;
+
+    width: 2000%;
+    height: 440px;
+}
+#banner .bannerCon .scroll img
+{
+    float: left;
+
+    width: 1060px;
+    height: 440px;
+}
+#banner .bannerBut
+{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+
+    width: 110px;
+    height: 40px;
+    margin-left: -55px;
+}
+#banner .bannerBut ul li
+{
+    float: left;
+
+    width: 7px;
+    height: 7px;
+    margin: 5px 7px;
+
+    border-radius: 7px;
+    background: #ccc;
+}
+#banner .bannerBut ul li.hover
+{
+    background: map-get($colorMaps,blue);
+}
 
 /*资讯新闻*/
 .section-news

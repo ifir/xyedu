@@ -74,7 +74,57 @@ $(function(){
 			
 	},50);
 	//资讯轮播图
-	
+	var _index1=1;
+
+	$('.bannerBut ul li').click(function(){
+		$(this).addClass('hover').siblings('li').removeClass('hover');
+		_index1=$(this).index();
+		$('.bannerCon .scroll').stop().animate({left:-_index1*1060},500);
+	});
+
+	//右边按钮
+	$('.after img').click(function(){
+		_index1+=1;
+		if(_index1>5){
+			_index1=1;
+			$('.scroll').css('left','0px');
+			$('.scroll').animate({left:-_index1*1060},500);
+			$('.bannerBut ul li').eq(_index1).addClass('hover').siblings('li').removeClass('hover');
+		}else{
+			$('.bannerBut ul li').eq(_index1).addClass('hover').siblings('li').removeClass('hover');
+			$('.scroll').animate({left:-_index1*1060},500);
+		}
+	});
+
+
+	//左边按钮
+	$('.before img').click(function(){
+		_index1-=1;
+		if(_index1<1){
+			_index1=5;
+			$('.scroll').css('left','-4240px');
+			$('.scroll').animate({left:-_index1*1060},500);
+			$('.bannerBut ul li').eq(_index1).addClass('hover').siblings('li').removeClass('hover');
+		}else{
+			$('.bannerBut ul li').eq(_index1).addClass('hover').siblings('li').removeClass('hover');
+			$('.scroll').animate({left:-_index1*1060},500);
+		}
+	});
+	//自动播放
+
+	var timer3 = setInterval(function(){
+		_index1+=1;
+		if(_index1>5){
+			_index1=1;
+			$('.scroll').css('left','0px');
+			$('.scroll').animate({left:-_index1*1060},500);
+			$('.bannerBut ul li').eq(_index1).addClass('hover').siblings('li').removeClass('hover');
+		}else{
+			$('.bannerBut ul li').eq(_index1).addClass('hover').siblings('li').removeClass('hover');
+			$('.scroll').animate({left:-_index1*1060},500);
+		}
+
+	},5000);
 	//资讯列表切换
 	var newsList = new List({
 		ele: $('#news-ul li'),
