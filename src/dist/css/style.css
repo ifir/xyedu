@@ -923,6 +923,21 @@ nav li:last-child {
   background: #3296ba;
 }
 
+.section-scroll .shu-font {
+  position: absolute;
+  left: 0;
+  width: 200px;
+  height: 600px;
+}
+
+.section-scroll .shu-font .pull-left {
+  font-size: 30px;
+  line-height: 30px;
+  width: 40px;
+  text-align: center;
+  color: #f39801;
+}
+
 .section-scroll .container > .text-center {
   font-size: 20px;
   width: 100px;
@@ -937,7 +952,7 @@ nav li:last-child {
   position: relative;
   width: 305px;
   height: 30px;
-  margin: 10px auto;
+  margin-left: 450px;
 }
 
 .section-scroll .caret-box i {
@@ -975,36 +990,53 @@ nav li:last-child {
 }
 
 .section-scroll .his-container {
+  position: relative;
   overflow: hidden;
   height: 400px;
 }
 
+.section-scroll .his-container .his-line {
+  position: absolute;
+  z-index: 10;
+  left: 50%;
+  display: block;
+  width: 2px;
+  height: 430px;
+  margin-left: 71px;
+  background: #fff;
+}
+
 .section-scroll .his-list {
   position: relative;
-  z-index: 5;
+  z-index: 15;
   width: 100%;
   height: 110px;
 }
 
-.section-scroll .his-list .pull-left,
-.section-scroll .his-list .pull-right {
-  width: 530px;
+.section-scroll .his-list > .pull-left {
+  width: 585px;
+}
+
+.section-scroll .his-list > .pull-right {
+  width: 440px;
+}
+
+.section-scroll .his-list > .pull-left, .section-scroll .his-list > .pull-right {
   margin-top: 20px;
 }
 
-.section-scroll .his-list .pull-left > div,
-.section-scroll .his-list .pull-right > div {
-  padding: 0 20px;
+.section-scroll .his-list > .pull-left .his-flow-info, .section-scroll .his-list > .pull-right .his-flow-info {
+  margin-top: 10px;
 }
 
-.section-scroll .his-list .pull-left span,
-.section-scroll .his-list .pull-right span {
+.section-scroll .his-list > .pull-left .his-flow-info span, .section-scroll .his-list > .pull-right .his-flow-info span {
   font-size: 20px;
+  line-height: 55px;
+  margin: 0 20px;
   color: #f39801;
 }
 
-.section-scroll .his-list .pull-left p,
-.section-scroll .his-list .pull-right p {
+.section-scroll .his-list > .pull-left .his-flow-info p, .section-scroll .his-list > .pull-right .his-flow-info p {
   color: #fff;
 }
 
@@ -1025,22 +1057,11 @@ nav li:last-child {
   width: 25px;
   height: 25px;
   margin-top: -12px;
-  margin-left: -12px;
+  margin-left: 60px;
   background: #f39801;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
-}
-
-.section-scroll .his-list .his-line {
-  position: absolute;
-  z-index: 10;
-  left: 50%;
-  display: block;
-  width: 2px;
-  height: 110px;
-  margin-left: -1px;
-  background: #fff;
 }
 
 .section-lingxing {
