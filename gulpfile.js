@@ -7,6 +7,8 @@ var minimg = require('gulp-imagemin');
 var changed = require('gulp-changed');//过滤变动的文件
 var plumber = require('gulp-plumber');//捕获处理任务中的错误
 //路径
+
+
 var scssPath = 'src/assets/scss/*.scss';
 var jsPath = 'src/assets/js/*.js';
 var imgPath = 'src/assets/img/*.*';
