@@ -8,21 +8,16 @@ $(function(){
 	});
 	//首页金牌名师自动切换事件
 	var Index = 0;
-	
-	var timer2 = setInterval(function(){
-			Index++;
-			indexEach();
-			if(Index > 1){
-				Index = 0;	
-				indexEach();
-			}
+	var timer2 = null;
 
-		},5000);
+	Timer2();
 	$('#index-btn span').each(function (index){
 		$(this).on('click',function(){
 			Index = index;
 			indexEach();
-		});	
+			clearInterval(timer2);
+			Timer2();
+		});
 	});
 
 	function indexEach(){
@@ -31,7 +26,25 @@ $(function(){
 		$('.photo-box').removeClass('index');
 		$('.photo-box').eq(Index).addClass('index');
 	}
-	//加入我们按钮切换	
+
+	$('.photo-info').on('mouseover', function(){
+		clearInterval(timer2);
+	});
+	$('.photo-info').on('mouseout', function(){
+		Timer2();
+	});
+	function Timer2(){
+		timer2 = setInterval(function(){
+			Index++;
+			indexEach();
+			if(Index > 1){
+				Index = 0;
+				indexEach();
+			}
+
+		},5000);
+	}
+	//加入我们按钮切换
 	var joinList = new List({
 		ele: $('.join-line input'),
 		con: $('.section-join-info .container'),
@@ -74,11 +87,14 @@ $(function(){
 	},50);
 	//资讯轮播图
 	var _index1=1;
-
+	var time3 = null;
+	Timer3();
 	$('.bannerBut ul li').click(function(){
 		$(this).addClass('hover').siblings('li').removeClass('hover');
 		_index1=$(this).index();
 		$('.bannerCon .scroll').stop().animate({left:-_index1*1060},500);
+		clearInterval(timer3);
+		Timer3();
 	});
 
 	//右边按钮
@@ -92,6 +108,8 @@ $(function(){
 		}else{
 			$('.bannerBut ul li').eq(_index1).addClass('hover').siblings('li').removeClass('hover');
 			$('.scroll').animate({left:-_index1*1060},500);
+			clearInterval(timer3);
+			Timer3();
 		}
 	});
 
@@ -107,23 +125,26 @@ $(function(){
 		}else{
 			$('.bannerBut ul li').eq(_index1).addClass('hover').siblings('li').removeClass('hover');
 			$('.scroll').animate({left:-_index1*1060},500);
+			clearInterval(timer3);
+			Timer3();
 		}
 	});
-	//自动播放
+	function Timer3(){
+		timer3 = setInterval(function(){
+			_index1+=1;
+			if(_index1>5){
+				_index1=1;
+				$('.scroll').css('left','0px');
+				$('.scroll').animate({left:-_index1*1060},500);
+				$('.bannerBut ul li').eq(_index1).addClass('hover').siblings('li').removeClass('hover');
+			}else{
+				$('.bannerBut ul li').eq(_index1).addClass('hover').siblings('li').removeClass('hover');
+				$('.scroll').animate({left:-_index1*1060},500);
+			}
 
-	var timer3 = setInterval(function(){
-		_index1+=1;
-		if(_index1>5){
-			_index1=1;
-			$('.scroll').css('left','0px');
-			$('.scroll').animate({left:-_index1*1060},500);
-			$('.bannerBut ul li').eq(_index1).addClass('hover').siblings('li').removeClass('hover');
-		}else{
-			$('.bannerBut ul li').eq(_index1).addClass('hover').siblings('li').removeClass('hover');
-			$('.scroll').animate({left:-_index1*1060},500);
-		}
+		},5000);
+	}
 
-	},5000);
 	//资讯列表切换
 	var newsList = new List({
 		ele: $('#news-ul li'),
@@ -145,6 +166,7 @@ $(function(){
 		$('#news-detail').hide();
 	});
 
+
 })
 
 function List(opt){
@@ -164,6 +186,6 @@ List.prototype.eachList = function (){
 			$(this).addClass(_this.cur);
 			con.removeClass(_this.showed);
 			con.eq(index).addClass(_this.showed);
-		});	
+		});
 	});
 }
