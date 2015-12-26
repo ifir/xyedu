@@ -855,7 +855,7 @@ nav li:last-child {
   line-height: 50px;
   position: relative;
   z-index: 5;
-  overflow: hidden;
+  display: block;
   height: 50px;
   cursor: pointer;
   border-bottom: 1px solid #ccc;
@@ -912,7 +912,11 @@ nav li:last-child {
 
 .section-join-info .job-box .job-explain-require {
   padding: 15px 0;
-  border-bottom: 1px dashed #ccc;
+}
+
+.section-join-info .job-box .job-explain-require span {
+  display: inline-block;
+  width: 300px;
 }
 
 /* ===============西游记事=============== */

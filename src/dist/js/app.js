@@ -45,7 +45,7 @@ $(function(){
 		cur: 'list-active',
 		showed: 'show'
 	});
-
+	/*弹出框关闭*/
 
 	$('.apply').on('click', function (){
 		var popup = $('.popup, .mask');
@@ -66,12 +66,11 @@ $(function(){
 	var num1=110;
 	var timer=setInterval(function(){
 		num1 -= 1;
-		listBox.css('top',num1);	
+		listBox.css('top',num1);
 		if(listBox.css('top') == '-1100px'){
 			num1 = 110;
 			listBox.css('top',num1);
 		}
-			
 	},50);
 	//资讯轮播图
 	var _index1=1;
@@ -136,16 +135,16 @@ $(function(){
 		var value = $(this).text();
 		var spanTitle = $('#news-con h4 span');
 		spanTitle.text(value);
-	})
+	});
 	$('#all-news-box a').on('click', function (){
 		$('#all-news-box').hide();
 		$('#news-detail').show();
-	})
+	});
 	$('#close-news, #news-ul li').on('click', function(){
 		$('#all-news-box').show();
 		$('#news-detail').hide();
-	})
-	
+	});
+
 })
 
 function List(opt){
