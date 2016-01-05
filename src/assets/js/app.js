@@ -77,14 +77,24 @@ $(function(){
 	//西游记事滚动
 	var listBox = $('#his-list-box');
 	var num1=110;
-	var timer=setInterval(function(){
-		num1 -= 1;
-		listBox.css('top',num1);
-		if(listBox.css('top') == '-1100px'){
-			num1 = 110;
+	var timer = null;
+	Timer();
+	function Timer(){
+		timer=setInterval(function(){
+			num1 -= 1;
 			listBox.css('top',num1);
-		}
-	},50);
+			if(listBox.css('top') == '-1100px'){
+				num1 = 110;
+				listBox.css('top',num1);
+			}
+		},50);
+	}
+	$('#his-list-box').on('mouseover', function(){
+		clearInterval(timer);
+	});
+	$('#his-list-box').on('mouseout', function(){
+		Timer();
+	});
 	//资讯轮播图
 	var _index1=1;
 	var time3 = null;
